@@ -1,0 +1,14 @@
+{
+  "task": "Task_13",
+  "model": "example_model_name",
+  "metrics": {
+    "primary_metric": 0.0,
+    "secondary_metric": 0.0,
+    "cross_val_mean": 0.0,
+    "cross_val_std": 0.0
+  },
+  "params": {
+    "random_state": 42
+  },
+  "notes": "Replace these placeholder numbers with your actual results."
+}

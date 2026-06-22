@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Data
+*.csv
+*.tsv
+*.parquet
+*.feather
+*.h5
+*.pkl
+*.npz
+DATASETS/raw/
+DATASETS/interim/
+DATASETS/processed/
+
+# Models
+*.bin
+*.pt
+*.pth
+*.onnx
+*.joblib
+models/checkpoints/
+
+# Logs
+*.log
+mlruns/
+wandb/
+runs/
+
+# OS / IDE
+.DS_Store
+.idea/
+.vscode/
+Thumbs.db
+
+# Secrets
+.env
+*.pem
+kaggle.json
