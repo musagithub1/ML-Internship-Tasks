@@ -1,100 +1,86 @@
 # 📋 TASK 06 — Classification Algorithms Comparison
 
+| Attribute | Value |
+|-----------|-------|
+| Difficulty | ⭐⭐⭐ Intermediate-Advanced |
+| Estimated Time | 5-6 days |
+| Prerequisites | Tasks 01-04 |
+| Key Skills | Logistic Regression, Decision Trees, Random Forest, SVM, KNN — understanding when each works best, handling class imbalance (SMOTE, class weights), threshold tuning, ROC/PR curves |
+
 ---
 
-## 🏢 Business Problem
+## 🎯 Learning Objectives
+After completing this task, you should be able to:
+1. Understand the core principles of classification algorithms comparison
+2. Apply the relevant tools and techniques to a real-world dataset
+3. Interpret the results in a business context
+4. Document and communicate your findings effectively
+5. Defend your technical decisions
 
-You have just joined the **Data Science team at a mid-sized company**. Your manager has assigned you a problem that — while it may look academic from the outside — mirrors a real responsibility you would own as a Junior ML Engineer.
+---
 
-**Scenario:**
-The business needs a defensible, data-driven approach to **classification algorithms comparison**. Decisions made downstream (pricing, targeting, risk approval, hiring) will rely on the quality of your work. A wrong call costs the company money, reputation, or compliance penalties.
-
-Your job is **not** to "get good accuracy." Your job is to:
-
-- Understand the business cost of being wrong.
-- Choose the right method (not the trendiest one).
-- Defend your choices with evidence.
-- Communicate the result clearly to non-technical stakeholders.
+## 🏢 Business Scenario
+Bank marketing campaign — each phone call costs $5. Current random calling converts 11%. You need a model to target likely subscribers. False positives waste $5/call. False negatives miss $500 in lifetime value.
 
 ---
 
 ## 📐 Detailed Requirements
 
-### 1. Problem Framing
-- [ ] Restate the business problem in your own words.
-- [ ] Define the ML problem type (regression / classification / clustering / etc.).
-- [ ] Define the **target metric** and justify it (why F1 instead of accuracy? why MAE instead of RMSE?).
-- [ ] Identify at least **2 risks or assumptions**.
+### 1. Data Processing
+- [ ] Load the dataset: **Bank Marketing (UCI/Kaggle)**
+- [ ] Perform appropriate data cleaning and preprocessing
+- [ ] Document all transformations and justify them
 
-### 2. Data
-- [ ] Use the recommended dataset: **Pima Indians Diabetes**.
-- [ ] Document its schema, size, and source.
-- [ ] Identify potential data quality issues *before* modeling.
+### 2. Implementation
+- [ ] Implement the core solution using multi-classifier comparison framework, threshold optimization, class imbalance handling
+- [ ] Follow best practices for Classification Algorithms Comparison
+- [ ] Ensure the solution is reproducible and modular
 
-### 3. Methodology
-- [ ] Implement the core technique(s) required for **Classification Algorithms Comparison**.
-- [ ] Compare at least **2 approaches** (baseline vs. improved).
-- [ ] Use proper validation — no leakage, no peeking at test data.
-- [ ] Reproducibility: set seeds, log versions.
+### 3. Evaluation
+- [ ] Evaluate the solution using relevant metrics
+- [ ] Compare with a simple baseline
+- [ ] Analyze the results and potential shortcomings
 
-### 4. Analysis
-- [ ] Produce at least **5 publication-quality visualizations**.
-- [ ] Explain what each chart tells the business — not just what it shows.
-- [ ] Quantify uncertainty where applicable (confidence intervals, error bars).
+---
 
-### 5. Communication
-- [ ] Write a `REPORT.md` with: Problem → Approach → Results → Recommendation.
-- [ ] Include a 5-bullet **Executive Summary** at the top of the report.
-- [ ] Tag every chart with a 1–2 sentence business takeaway.
+## 🗺️ Suggested Approach
+### Phase 1: Exploration & Setup (Day 1)
+- Understand the business problem and dataset
+- Set up your environment and initial scripts
 
-### 6. Engineering
-- [ ] Code organized in functions / modules — no 500-line monolithic notebooks.
-- [ ] `requirements.txt` pinned with versions.
-- [ ] `README.md` inside your task folder with how to run it.
-- [ ] Commit history shows incremental progress (not one giant "final commit").
+### Phase 2: Core Implementation (Day 2-3)
+- Build the main pipeline or model
+- Iterate and refine the approach
+
+### Phase 3: Evaluation & Polishing (Day 4+)
+- Evaluate the results and finalize the code
+- Write the final report and ensure reproducibility
 
 ---
 
 ## ⛔ Constraints
-
-1. **No copy-pasting Kaggle notebooks.** Reference them, don't steal them. Cite every source.
-2. **No premature modeling.** You must do EDA before fitting anything.
-3. **No data leakage.** Splits happen before transformations that learn from the data.
-4. **No "black box submissions."** Every model decision must be explainable.
-5. **Reproducibility required.** A reviewer should be able to clone your repo and reproduce results within 10 minutes.
+- Code must be modular and documented
+- No data leakage allowed
+- Must run locally with the provided requirements.txt
 
 ---
 
 ## 📦 Deliverables
-
-| # | Deliverable | Format |
-|---|-------------|--------|
-| 1 | Solution notebook | `.ipynb` |
-| 2 | Modular helpers | `src/` folder with `.py` files |
-| 3 | Written report | `REPORT.md` |
-| 4 | Visualizations | `figures/*.png` |
-| 5 | Requirements file | `requirements.txt` |
-| 6 | README | `README.md` inside your task folder |
-| 7 | (Optional) Recorded walkthrough | Loom / YouTube unlisted link |
+- Solution notebook or scripts (`.ipynb` or `.py`)
+- Modular helpers in `src/` directory
+- Written report in `REPORT.md`
+- Any relevant visualizations or configuration files
 
 ---
 
 ## ✅ Success Criteria
-
-Your submission is considered **successful** if:
-
-- A senior engineer can clone your repo and reproduce your results in **≤ 10 minutes**.
-- Your report can be read by a **non-technical manager** and they walk away knowing what you did and why.
-- Your visualizations would survive a **screenshot in a stakeholder meeting** without embarrassment.
-- Your code passes basic linting (`flake8` / `ruff`) and uses meaningful function names.
-- You can defend every modeling decision in a **15-minute mock interview**.
+- The solution addresses the specific business problem outlined above.
+- Code is clean, well-structured, and passes linting.
+- The report clearly explains the methodology and business impact.
+- The repository can be cloned and run seamlessly.
 
 ---
 
 ## 🧭 Dataset
-
-**Name:** Pima Indians Diabetes
-**Description:** 768 diagnostic records used to predict diabetes onset based on 8 medical predictor variables.
-**Source:** [https://www.kaggle.com/datasets/uciml/pima-indians-diabetes-database](https://www.kaggle.com/datasets/uciml/pima-indians-diabetes-database)
-
-See [`DATASETS/dataset_info.md`](./DATASETS/dataset_info.md) for full details and alternative sources.
+**Name:** Bank Marketing (UCI/Kaggle)
+See `DATASETS/dataset_info.md` for full details and alternative sources.
